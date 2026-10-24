@@ -1,0 +1,5 @@
+{
+  "supabaseUrl": "ضع_رابط_مشروع_Supabase_هنا",
+  "supabaseAnonKey": "ضع_المفتاح_العام_anon_هنا",
+  "shareViaFunction": true
+}

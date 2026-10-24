@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>لوحة الإدارة</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@400;500;600&family=Reem+Kufi:wght@500;600;700&display=swap" rel="stylesheet">
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="apple-touch-icon" href="../icons/apple-touch-icon.png">
+<meta name="theme-color" content="#13302b">
+<link rel="stylesheet" href="../css/base.css">
+<link rel="stylesheet" href="admin.css">
+</head>
+<body>
+<section id="login" class="login" hidden>
+  <form id="loginForm" class="login-card" novalidate>
+    <h1>لوحة الإدارة</h1>
+    <p class="muted">للمدير فقط. سجّل الدخول بالبريد وكلمة المرور.</p>
+    <div class="field"><label for="em">البريد الإلكتروني</label><input id="em" class="in" type="email" autocomplete="username" dir="ltr" style="text-align:right" required></div>
+    <div class="field"><label for="pw">كلمة المرور</label><input id="pw" class="in" type="password" autocomplete="current-password" dir="ltr" style="text-align:right" required></div>
+    <div id="loginErr" class="err" role="alert"></div>
+    <button class="btn btn-block" type="submit">دخول</button>
+    <p style="text-align:center;margin-bottom:0"><a href="../">العودة إلى المتجر</a></p>
+  </form>
+</section>
+
+<div id="app" hidden>
+  <header class="ahead">
+    <strong id="aName" class="aname">لوحة الإدارة</strong>
+    <div class="ahead-act">
+      <a class="btn btn-ghost btn-sm" href="../" target="_blank" rel="noopener">عرض المتجر</a>
+      <button id="logout" class="btn btn-ghost btn-sm" type="button">خروج</button>
+    </div>
+  </header>
+  <nav id="tabs" class="tabs" aria-label="أقسام اللوحة"></nav>
+  <main id="panel" class="apanel"></main>
+</div>
+
+<dialog id="dlg" class="wide"></dialog>
+<div id="printArea" aria-hidden="true"></div>
+<script type="module" src="admin.js"></script>
+</body>
+</html>
